@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pp Widget Parent</title>
+    <script src="http://krakenjs.com/zoid/dist/zoid.js"></script>
+    <script src="http://localhost:8080/login.js"></script>
+  </head>
+  <body>
+    <button id="ppWidget" class="btn btn-primary">
+      Apply with Paypossible
+    </button>
+    <div id="result"></div>
+
+    <script>
+      document.querySelector("#ppWidget").addEventListener("click", function() {
+        PPWidget({
+          preFillId: "joeschmoe"
+        }).render("body", zoid.CONTEXT.POPUP);
+      });
+    </script>
+  </body>
+</html>
